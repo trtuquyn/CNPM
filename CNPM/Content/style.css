@@ -1,0 +1,146 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(255,241,247) !important;
+    display: flex
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-bot {
+    justify-content: center
+}
+
+
+.navbar li a {
+    color: rgb(255 0 109) !important;
+}
+
+.navbar ul > li {
+    list-style: none;
+    padding: 0px 15px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+    .navbar li ul {
+        background-color: #ffd6e8;
+        padding: 0px 10px;
+        display: none;
+        position: absolute;
+        width: 500px;
+    }
+
+    .navbar li:hover > ul {
+        display: block;
+    }
+
+    .navbar li > ul a {
+        padding: 10px;
+        padding-right: 30px;
+    }
+
+#main-menu {
+    justify-content: space-between;
+    display: flex;
+}
+
+    #main-menu a:hover {
+        font-weight: 600
+    }
+
+    #main-menu ul.sub-menu li:hover a {
+        font-weight: bold;
+    }
+
+    #main-menu ul.sub-menu li:last-child a {
+        border-bottom: none;
+    }
+
+    #main-menu > li.has-child::after {
+        content: "\f107";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: rgb(255 0 109);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 14px 5px;
+        display: inline-block;
+        cursor: pointer
+    }
+
+.sub-menu {
+    max-width: 200px;
+}
+
+#toggle {
+    margin-top: -8px;
+    color: rgb(255 0 109);
+    outline: 0;
+    font-size: 20px
+}
+
+
+@media screen and (max-width: 768px) {
+    #main-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #toggle {
+        display: block
+    }
+
+    .header-bot {
+        display: none
+    }
+}
+
+.search {
+    position: relative;
+    border-radius: 50px;
+    background-color: #fff;
+    width: 450px
+}
+
+    .search input {
+        background-color: #fff;
+        border: none;
+        border-radius: 50px;
+        font-size: 12px;
+        line-height: 14px;
+        height: 40px;
+        padding: 10px 10px 10px 20px;
+        width: calc(100% - 35px);
+        outline: 0
+    }
+
+input, select, textarea {
+    max-width: 400px;
+}
+
+.search button {
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    border: none;
+    outline: 0;
+    margin-left: 20px
+}
+
+.cart button {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    padding: 0px 10px;
+    margin: 4px 5px;
+}
